@@ -1,3 +1,4 @@
+
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
@@ -42,11 +43,14 @@
 
 <script>
 	window.onload = function () {
-		var element = document.getElementById("innerDiv");
-		alert(element.innerHTML);
-
-		var paragraphs = document.getElementsByTagName("p");
-		alert(paragraphs.length);
+	/*	var outerDiv = document.getElementById("outerDiv");
+		var element = document.createElement("article");
+		element.innerText = "My new <article> element";
+		outerDiv.appendChild(element);*/
+		var element = document.getElementById("outerDiv").insertBefore(
+		document.createElement("article"),
+		document.getElementById("innerDiv"));
+		element.innerText = "My new <article> element";
 	}
 </script>
 </html>
