@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function teste (){
+
+
+        }
+        window.onload = function () {
+
+            var element = document.getElementById("outerDiv");
+            console.log("getElementById", element);
+
+            var paragraphs = document.getElementsByTagName("p");
+            console.log("getElementsByTagName", paragraphs);
+
+            // for (var key in paragraphs) {
+            //       paragraphs[key].innerText = "teste";
+            // }
+
+            // Array.from(paragraphs).forEach(
+            //     function (element, index, array) {
+            //         element.innerText = "teste" 
+            //     }
+            // );
+
+            Array.from(paragraphs).forEach((element, index, array) => {
+                element.innerText = "teste" 
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Adding or modifying HTML elements</h1>
+    </header>
+    <article>
+        <header>
+            <hgroup>
+                <h1>Document Object Model</h1>
+            </hgroup>
+        </header>
+        <p>The DOM is essentially a collection of nodes arranged in a tree. All the nodes are related to each other. They are
+            one big happy family of children, siblings, parents, grandparents, grandchildren, and so on. This essence of
+            a family tree represents the hierarchy of the DOM and is important to understand as you manipulate the DOM through
+            code.
+        </p>
+    </article>
+    <article>
+        <header>
+            <hgroup>
+                <h1>Methods available for selecting DOM elements</h1>
+            </hgroup>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Usage description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>getElementById</td>
+                    <td>Gets an individual element on the page by its unique id attribute value</td>
+                </tr>
+                <tr>
+                    <td>getElementsByClassName</td>
+                    <td>Gets all the elements that have the specified CSS class applied to them</td>
+                </tr>
+                <tr>
+                    <td>getElementsByTagName</td>
+                    <td>Gets all the elements of the page that have the specified tag name or element name</td>
+                </tr>
+                <tr>
+                    <td>querySelector</td>
+                    <td>Gets the first child element found that matches the provided CSS selector criteria</td>
+                </tr>
+                <tr>
+                    <td>querySelectorAll</td>
+                    <td>Gets all the child elements that match the provided CSS selector criteria</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <div id="outerDiv">
+        <p class='mainPara'>Main Paragraph</p>
+        <ul>
+            <li>First List Item</li>
+            <li>Second List Item</li>
+            <li>Third List Item</li>
+            <li>Fourth List Item</li>
+        </ul>
+        <div id="innerDiv">
+            <p class='subPara' id='P1'>Paragraph 1</p>
+            <p class='subPara' id='P2'>Paragraph 2</p>
+            <p class='subPara' id='P3'>Paragraph 3</p>
+            <p class='subPara' id='P4'>Paragraph 4</p>
+        </div>
+        <table>
+            <tr>
+                <td>Row 1
+                </td>
+            </tr>
+            <tr>
+                <td>Row 2
+                </td>
+            </tr>
+            <tr>
+                <td>Row 3
+                </td>
+            </tr>
+            <tr>
+                <td>Row 4
+                </td>
+            </tr>
+            <tr>
+                <td>Row 5
+                </td>
+            </tr>
+        </table>
+        <input type="text" /><input type="submit" value="Submit" />
+</body>
+
+</html>
