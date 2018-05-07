@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
+
+        function teste (){
+
+
+        }
         window.onload = function () {
 
             var element = document.getElementById("outerDiv");
@@ -12,9 +17,9 @@
             var paragraphs = document.getElementsByTagName("p");
             console.log("getElementsByTagName", paragraphs);
 
-            for (var key in paragraphs) {
-                  paragraphs[key].innerText = "teste";
-            }
+            // for (var key in paragraphs) {
+            //       paragraphs[key].innerText = "teste";
+            // }
 
             // Array.from(paragraphs).forEach(
             //     function (element, index, array) {
@@ -22,9 +27,9 @@
             //     }
             // );
 
-            // Array.from(paragraphs).forEach((element, index, array) => {
-            //     element.innerText = "teste" 
-            // });
+            Array.from(paragraphs).forEach((element, index, array) => {
+                element.innerText = "teste" 
+            });
 
         }
     </script>
