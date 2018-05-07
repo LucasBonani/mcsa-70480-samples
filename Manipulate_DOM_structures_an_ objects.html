@@ -1,23 +1,24 @@
-
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title></title>
 	<script>
 		window.onload = function () {
-		/*	var outerDiv = document.getElementById("outerDiv");
-			var element = document.createElement("article");
-			element.innerText = "My new <article> element";
-			outerDiv.appendChild(element);*/
+			/*	var outerDiv = document.getElementById("outerDiv");
+				var element = document.createElement("article");
+				element.innerText = "My new <article> element";
+				outerDiv.appendChild(element);*/
 			var element = document.getElementById("outerDiv").insertBefore(
-			document.createElement("article"),
-			document.getElementById("innerDiv"));
+				document.createElement("article"),
+				document.getElementById("innerDiv"));
 			element.innerText = "My new <article> element";
 		}
 	</script>
 </head>
-<body>	
+
+<body>
 	<div id="outerDiv">
 		<p class='mainPara'>Main Paragraph</p>
 		<ul>
@@ -49,7 +50,12 @@
 				<td>Row 5</td>
 			</tr>
 		</table>
-		<input type="text"/><input type="submit" value="Submit"/>
+		<input type="text" />
+		<input type="submit" value="Submit" />
 	</div>
 </body>
+<footer>
+	<a href="Home.html">Voltar</a>
+</footer>
+
 </html>
