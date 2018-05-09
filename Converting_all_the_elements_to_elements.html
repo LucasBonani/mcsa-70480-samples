@@ -3,11 +3,15 @@
 <body>
     <header>
         <h1>Converting All Elements</h1>
-        
-    </header>
-    <footer>
-        <a href="Home.html">Voltar</a>
-    </footer>
+
+        var innerDiv = document.getElementById("innerDiv"); var newDiv = document.createElement("div"); for (var i = 0; i
+        <
+            innerDiv.childNodes.length; i++) { var anchor=n ewDiv.appendChild(document.createElement( "a")); anchor.setAttribute(
+            "href", "http://www.bing.ca"); anchor.text=i nnerDiv.childNodes[i].textContent; newDiv.appendChild(document.createElement(
+            "br")); } innerDiv.replaceNode(newDiv); </header>
+            <footer>
+                <a href="Home.html">Voltar</a>
+            </footer>
 
 </body>
 
