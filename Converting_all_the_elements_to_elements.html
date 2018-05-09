@@ -1,21 +1,21 @@
 <html>
 
 <body>
-    <header>
-        <script>
+    <script>
 
-            window.onload = function () {                
-                var innerDiv = document.getElementById("innerDiv");
-                var newDiv = document.createElement("div");
-                for (var i = 0; i < innerDiv.childNodes.length; i++) {
-                    var anchor = newDiv.appendChild(document.createElement("p"));
-                    anchor.setAttribute("href", "http://www.google.com.br");
-                    anchor.text = innerDiv.childNodes[i].textContent;
-                    newDiv.appendChild(document.createElement("br"));
-                }
-                innerDiv.replaceNode(newDiv);
+        window.onload = function () {
+            var innerDiv = document.getElementById("innerDiv");
+            var newDiv = document.createElement("div");
+            for (var i = 0; i < innerDiv.childNodes.length; i++) {
+                var anchor = newDiv.appendChild(document.createElement("p"));
+                anchor.setAttribute("href", "http://www.google.com.br");
+                anchor.text = innerDiv.childNodes[i].textContent;
+                newDiv.appendChild(document.createElement("br"));
             }
-        </script>
+            innerDiv.replaceNode(newDiv);
+        }
+    </script>
+    <header>
         <h1>Converting All Elements</h1>
 
         <div id="outerDiv">
