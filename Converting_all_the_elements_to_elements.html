@@ -7,7 +7,7 @@
             var innerDiv = document.getElementById("innerDiv");
             var newDiv = document.createElement("div");
             for (var i = 0; i < innerDiv.childNodes.length; i++) {
-                var anchor = newDiv.appendChild(document.createElement("p"));
+                var anchor = newDiv.appendChild(document.createElement("a"));
                 anchor.setAttribute("href", "http://www.google.com.br");
                 anchor.text = innerDiv.childNodes[i].textContent;
                 newDiv.appendChild(document.createElement("br"));
