@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style>
+	canvas {
+		border: 1px solid black;
+	}
+	</style>
+	<script>
+		window.onload = function () {
+		 var drawingSurface = document.getElementById("drawingSurface");
+		 var ctxt = drawingSurface.getContext("2d");
+		 ctxt.beginPath();
+		 ctxt.moveTo(200, 0) ;// Eixo x no meio do quadrado  e y no inicio
+		 ctxt.lineTo(200, 400); // Eixo x no meio do quadrado  e y no fim
+		 ctxt.stroke();
+	}
+	</script>
+</head>
+
+<body>
+	<canvas id="drawingSurface" width="400" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+</body>
+<footer>
+    <a href="Home.html">Voltar</a>
+</footer>
+
+</html>
