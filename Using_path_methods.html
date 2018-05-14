@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drawing curves</title>
+</head>
+<style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+<script>    
+    window.onload = function () {
+        
+        ////DESENHO SEM PREENCHIMENTO////
+        var drawingSurface = document.getElementById("drawingSurface");
+        var ctxt = drawingSurface.getContext("2d");
+
+        ctxt.beginPath();
+        ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+        ctxt.lineTo(150, 125);
+        ctxt.quadraticCurveTo(300, 0, 450, 125);
+        ctxt.lineTo(353, 144);
+        ctxt.strokeStyle = "blue";
+        ctxt.lineCap = "round";
+        ctxt.lineWidth = 10;
+        ctxt.stroke();
+
+
+        ///DESENHO COM PREENCHIMENTO INTERNO////
+        var drawingSurface = document.getElementById("drawingSurface2");
+        var ctxt = drawingSurface.getContext("2d");
+
+        ctxt.beginPath();
+        ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+        ctxt.lineTo(150, 125);
+        ctxt.quadraticCurveTo(300, 0, 450, 125);
+        ctxt.lineTo(353, 144);
+        ctxt.strokeStyle = "blue";
+        ctxt.lineCap = "round";
+        ctxt.lineWidth = 10;
+        ctxt.fillStyle = "Green";
+        ctxt.fill();
+        ctxt.stroke();
+    }
+</script>
+
+<body>
+    <h2>Desenho sem preenchimento interno</h2>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+
+    <h2>Desenho com preenchimento</h2>
+    <canvas id="drawingSurface2" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+</body>
+<footer>
+    <a href="Home.html">Voltar</a>
+</footer>
+
+</html>
