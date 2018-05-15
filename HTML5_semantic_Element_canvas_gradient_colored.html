@@ -21,6 +21,19 @@
 			ctxt.fillStyle = gradient;
 			ctxt.fill();
 			ctxt.stroke();
+
+			var ctxt = drawingSurface.getContext("2d");
+			ctxt.lineWidth = 3;
+			ctxt.rect(150, 150, 200, 125);
+			var img = new Image();
+			
+			img.src = "texture.png";
+				img.onload = function () {
+				var pat = ctxt.createPattern(img, "repeat");
+				ctxt.fillStyle = pat;
+				ctxt.fill();
+				ctxt.stroke();
+				}
 		}		
 	</script>	
 <body>	
