@@ -1,5 +1,6 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 </head>
 
 <script>
+<<<<<<< HEAD
 		window.onload = function () {
 			var drawingSurface = document.getElementById("drawingSurface");
 			var ctxt = drawingSurface.getContext("2d");
@@ -37,11 +39,33 @@
 		}		
 	</script>	
 <body>	
+=======
+	window.onload = function () {
+		var drawingSurface = document.getElementById("drawingSurface");
+		var ctxt = drawingSurface.getContext("2d");
+
+		ctxt.lineWidth = 3;
+		ctxt.rect(150, 150, 250, 175);
+		var gradient = ctxt.createRadialGradient(200, 200, 5, 250, 250, 100);
+		gradient.addColorStop(0, "Red");
+		gradient.addColorStop(.5, "Orange");
+		gradient.addColorStop(1, "Blue");
+		ctxt.fillStyle = gradient;
+		ctxt.fill();
+		ctxt.stroke();
+	}		
+</script>
+
+<body>
+>>>>>>> master
 	<canvas id="drawingSurface" width="600" height="400">
 		Your browser does not support HTML5.
 	</canvas>
 </body>
 <footer>
-    <a href="Home.html">Voltar</a>
+	<a href="Home.html" title="Voltar">
+		<img src="volta.gif" alt="voltar" / style="width:100px; height:50px;">
+	</a>
 </footer>
+
 </html>
