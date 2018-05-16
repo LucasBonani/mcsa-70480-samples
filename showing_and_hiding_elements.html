@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Showing and Hiding Image</title>
+	<style>
+		#orange1 {
+		height: 150px;
+		width: 225px;
+		}
+		.trans {
+		transform: scale(1) ;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			document.getElementById("innerDiv").style.display = 'inline';
+
+			document.getElementById("orange1").onclick = function () {
+				this.classList.add("trans");
+			}
+
+			document.getElementById("btnHideAnElement").onclick = function () {
+				if (document.getElementById("innerDiv").style.display == 'inline') {
+					document.getElementById("innerDiv").style.display = 'none';
+				}
+				else {
+					document.getElementById("innerDiv").style.display = 'inline';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="innerDiv"><img id="orange1" src="orange.jpg" style="position:relative"/></div>
+	<button type="button" id="btnHideAnElement" >Show/Hide Element</button>
+</body>
+</html>
