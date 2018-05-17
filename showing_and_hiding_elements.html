@@ -14,18 +14,42 @@
 	</style>
 	<script>
 		window.onload = function () {
-			document.getElementById("innerDiv").style.display = 'inline';
+			
+			displayElementWithStyle();
+			displayElementWithVisibility();
 
-			document.getElementById("orange1").onclick = function () {
-				this.classList.add("trans");
+			function displayElementWithStyle(){
+				document.getElementById("innerDiv").style.display = 'inline';
+
+				document.getElementById("orange1").onclick = function () {
+					this.classList.add("trans");
+				}
+
+				document.getElementById("btnHideAnElement").onclick = function () {
+					if (document.getElementById("innerDiv").style.display == 'inline') {
+						document.getElementById("innerDiv").style.display = 'none';
+					}
+					else {
+						document.getElementById("innerDiv").style.display = 'inline';
+					}
+				}
 			}
 
-			document.getElementById("btnHideAnElement").onclick = function () {
-				if (document.getElementById("innerDiv").style.display == 'inline') {
-					document.getElementById("innerDiv").style.display = 'none';
+			function displayElementWithVisibility(){
+				document.getElementById("innerDiv").style.visibility = 'visible';
+
+				document.getElementById("orange1").onclick = function () {
+					this.classList.add("trans");
 				}
-				else {
-					document.getElementById("innerDiv").style.display = 'inline';
+
+				document.getElementById("btnVisibilityAnElement").onclick = function () {
+					
+					if (document.getElementById("innerDiv").style.visibility == 'visible') {
+						document.getElementById("innerDiv").style.visibility = 'hidden';
+					}
+					else {
+						document.getElementById("innerDiv").style.visibility = 'visible';
+					}
 				}
 			}
 		}
@@ -34,6 +58,7 @@
 <body>
 	<div id="innerDiv"><img id="orange1" src="orange.jpg" style="position:relative"/></div>
 	<button type="button" id="btnHideAnElement" >Show/Hide Element</button>
+	<button type="button" id="btnVisibilityAnElement" >Visibility Element</button>
 </body>
 <footer>
 	<a href="Home.html" title="Voltar">
