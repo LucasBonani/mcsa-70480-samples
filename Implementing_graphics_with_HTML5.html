@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+
+
+			drawingSurface1();
+			drawingSurface2();
+			drawingSurface3();
+
+			function drawingSurface3(){
+
+				var drawingSurface = document.getElementById("drawingSurface3");
+				var ctxt = drawingSurface.getContext("2d");
+				ctxt.strokeText("1. Text with default font", 100, 100);
+				ctxt.font = "24px arial";
+				ctxt.strokeText("2. Text with altered font", 100, 125);
+				ctxt.font = "24px arial";
+				ctxt.strokeStyle = "Red";
+				ctxt.strokeText("3. Text with altered colored font", 100, 1);
+				ctxt.font = "24px arial";
+				ctxt.fillStyle = "Red";
+				ctxt.fillText("4. Text with altered colored font", 100, 185);
+
+			}
+
+			function drawingSurface2() {
+				
+				var drawingSurface = document.getElementById("drawingSurface2");
+				var ctxt = drawingSurface.getContext("2d");
+				
+				ctxt.beginPath();
+				ctxt.arc(150,100,75,0,2 * Math.PI, false);
+				ctxt.lineWidth = 25;
+				ctxt.strokeStyle = '#0f0';
+				ctxt.stroke();
+
+				ctxt.beginPath();
+				ctxt.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false);
+				ctxt.lineWidth = 25;
+				ctxt.strokeStyle = 'blue';
+				ctxt.stroke();
+
+				ctxt.beginPath();
+				ctxt.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false);
+				ctxt.lineWidth = 25;
+				ctxt.strokeStyle = '#0ff';
+				ctxt.stroke();
+
+				ctxt.beginPath();
+				ctxt.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false);
+				ctxt.lineWidth = 25;
+				ctxt.strokeStyle = '#f00';
+				ctxt.stroke();
+
+
+			}
+
+			function drawingSurface1() {
+				var drawingSurface = document.getElementById("drawingSurface1");
+				var ctxt = drawingSurface.getContext("2d");
+
+				ctxt.beginPath();
+				ctxt.moveTo(200, 0);// Eixo x no meio do quadrado  e y no inicio
+				ctxt.lineTo(200, 400); // Eixo x no meio do quadrado  e y no fim
+				ctxt.stroke();
+
+
+				ctxt.beginPath();
+				ctxt.moveTo(200, 200);
+				ctxt.lineTo(225, 350);
+				ctxt.lineTo(300, 10);
+				ctxt.lineTo(400, 350);
+				ctxt.lineWidth = 5;
+				ctxt.strokeStyle = '#0f0';
+				ctxt.stroke();
+
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<canvas id="drawingSurface1" width="400" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+
+	<canvas id="drawingSurface2" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+		<canvas id="drawingSurface3" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+	<table>
+		<tr>
+			<td>Method</td>
+			<td>Description</td>
+		</tr>
+		<tr>
+			<td>beginPath</td>
+			<td>Resets/begins a new drawing path</td>
+		</tr>
+		<tr>
+			<td>moveTo</td>
+			<td>Moves the context to the point set in the beginPath method</td>
+		</tr>
+		<tr>
+			<td>lineTo</td>
+			<td>Sets the destination end point for the line</td>
+		</tr>
+		<tr>
+			<td>stroke</td>
+			<td>Strokes the line, which makes the line visible</td>
+		</tr>
+	</table>
+
+
+</body>
+<footer>
+	<a href="Home.html">Voltar</a>
+</footer>
+
+</html>

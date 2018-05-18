@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to make changes to a list item, using the createDocumentFragment method, then appending the list item as the last child of the list.</p>
+
+<ul><li>Coffee</li><li>Tea</li><li>teste</li></ul>
+
+<button onclick="myFunction()">Try it</button>
+
+<button id="teste">teste1</button>
+
+<button id="teste2">teste2</button>
+
+
+<div id="teste3">
+
+     <div>
+    	0
+    </div>
+	<div>
+    	1
+    </div>
+    <div>
+    	2
+    </div>
+    
+</div>
+
+<script>
+function myFunction() {
+
+	var d = document.createDocumentFragment();
+    d.appendChild(document.getElementById("teste"));
+    document.getElementsByTagName("div")[1].appendChild(d);
+    
+   	//var d2 = document.getElementById("container");
+   // d2.appendChild(document.getElementById("teste2"));
+
+    
+}
+</script>
+
+</body>
+</html>
