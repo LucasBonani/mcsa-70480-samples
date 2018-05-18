@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		
+		window.onload = function(){
+		
+			console.log("localStorage - Nome",localStorage.getItem("Nome"));
+			
+		}
+	
+		function cache(){
+			localStorage.setItem("Nome", "wilson");
+		}
+	</script>
+	
+</head>
+
+<body>
+    <!-- page content goes here -->
+	<button onClick="cache()">localStorage</button>
+</body>
+<footer>
+    <a href="Home.html">Voltar</a>
+</footer>
+
+</html>
