@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>sessionStorage</title>
+	<script>		
+		window.onload = function(){		
+			console.log("sessionStorage - Nome",sessionStorage.getItem("Nome"));			
+		}
+	
+		function cache(){
+			sessionStorage.setItem("Nome", "Lucas");
+		}
+	</script>	
+</head>
+<body>
+	<button onClick="cache()">sessionStorage</button>
+</body>
+<footer>
+    <a href="Home.html">Voltar</a>
+</footer>
+</html>
