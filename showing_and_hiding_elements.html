@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Showing and Hiding Image</title>
+	<style>
+		#orange1 {
+		height: 150px;
+		width: 225px;
+		}
+		.trans {
+		transform: scale(1) ;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			
+			displayElementWithStyle();
+			displayElementWithVisibility();
+
+			function displayElementWithStyle(){
+				document.getElementById("innerDiv").style.display = 'inline';
+
+				document.getElementById("orange1").onclick = function () {
+					this.classList.add("trans");
+				}
+
+				document.getElementById("btnHideAnElement").onclick = function () {
+					if (document.getElementById("innerDiv").style.display == 'inline') {
+						document.getElementById("innerDiv").style.display = 'none';
+					}
+					else {
+						document.getElementById("innerDiv").style.display = 'inline';
+					}
+				}
+			}
+
+			function displayElementWithVisibility(){
+				document.getElementById("innerDiv").style.visibility = 'visible';
+
+				document.getElementById("orange1").onclick = function () {
+					this.classList.add("trans");
+				}
+
+				document.getElementById("btnVisibilityAnElement").onclick = function () {
+					
+					if (document.getElementById("innerDiv").style.visibility == 'visible') {
+						document.getElementById("innerDiv").style.visibility = 'hidden';
+					}
+					else {
+						document.getElementById("innerDiv").style.visibility = 'visible';
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="innerDiv"><img id="orange1" src="orange.jpg" style="position:relative"/></div>
+	<button type="button" id="btnHideAnElement" >Show/Hide Element</button>
+	<button type="button" id="btnVisibilityAnElement" >Visibility Element</button>
+</body>
+<footer>
+	<a href="Home.html" title="Voltar">
+		<img src="volta.gif" alt="voltar" / style="width:100px; height:50px;">
+	</a>
+</footer>
+</html>

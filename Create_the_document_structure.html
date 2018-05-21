@@ -3,14 +3,36 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Create the document structure</title>
 </head>
 
 <body>
+    <h2>Create the document structure</h2>
     <!-- page content goes here -->
+    <p>If you want to write semantic markup – and believe us, you do want to write semantic markup – then you need to structure
+        HTML documents properly. The html, head, and body elements have been part of the HTML specification since the mid
+        1990s, and up until a few years ago they were the primary elements used to give structure to HTML documents. However,
+        the situation has changed dramatically in the last few years as HTML5 has added a slew of new tags that can be used
+        to add rich semantic meaning to the structure of an HTML document. Read more: https://html.com/document/#ixzz5FZGQYIMO</p>
+
+    <h2>HTML Document Structure Before HTML5</h2>
+    <p>If you’ve been using HTML for any time at all you know that every bit of HTML needs to be wrapped in html tags. An opening
+        <!html>tag should appear first and a closing tag should appear at the bottom of the document. Every other bit of HTML should
+        appear between those two tags. The head element is the first element to appear after the opening html tag. In the
+        document head we place things like the page title and meta data, we add JavaScript to our page with the script tag,
+        and we [link] to external stylesheets and other resources. On most webpages the head element is a very busy place.
+        For this reason, we’ve created a tutorial that explains the tags that typically appear in the head element and what
+        these tags are used for. All of the content that is visible on a web page is nested between opening and closing body
+        tags. The body is the primary container of the content that makes up a web page. Up until HTML5, that was pretty
+        much it for basic HTML document structure. All of our code was dropped in between the body tags and styled with CSS.
+        However, now that HTML5 has broad support among modern browsers, it’s time to implement the new HTML5 tags that will
+        give our HTML documents a much more meaningful structure. Read more: https://html.com/document/#ixzz5FZIN8juY</p>
+
 </body>
 <footer>
-    <a href="Home.html">Voltar</a>
+    <a href="Home.html" title="Voltar">
+        <img src="volta.gif" alt="voltar" / style="width:100px; height:50px;">
+    </a>
 </footer>
 
 </html>
